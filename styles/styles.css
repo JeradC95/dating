@@ -1,4 +1,24 @@
 img {
-    width: 50%;
+    width: 100%;
     height: auto;
+    alignment: right;
+    border-radius: 25%;
+}
+
+button {
+     border-radius: 20%;
+    text-align: center;
+ }
+
+#quotes{
+    text-indent: 50px;
+}
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.vertical-center {
+    position: center;
 }
