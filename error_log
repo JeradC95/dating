@@ -8,3 +8,42 @@
 [29-Jan-2021 01:47:15 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
 [29-Jan-2021 01:48:57 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
 [29-Jan-2021 01:48:57 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:01:43 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:01:43 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:03:03 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:03:03 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:06:58 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:06:58 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:02 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:06 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:06 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:30 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:30 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:38 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:38 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:51 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:51 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:54 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:07:54 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:09:07 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:09:07 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:12 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:12 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:21 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:21 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:25 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:10:25 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:11:06 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:11:06 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:11:35 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:11:35 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 9
+[29-Jan-2021 02:13:27 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:13:27 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:14:08 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:14:08 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:14:11 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:14:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/jclarkgr/public_html/328/dating/index.php on line 34
+[29-Jan-2021 02:17:46 UTC] HTTP 404 (GET /index.php)
+[29-Jan-2021 02:17:46 UTC] [328/dating/vendor/bcosca/fatfree-core/base.php:1792] Base->error()
+[29-Jan-2021 02:17:46 UTC] [328/dating/index.php:48] Base->run()
