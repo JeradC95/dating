@@ -17,7 +17,7 @@
             <a class="navbar-brand" href="#">DevsMeet</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="home.html">Home</a></li>
+            <li class="active"><a href="{{ @BASE }}">Home</a></li>
         </ul>
     </div>
 </nav>
@@ -30,7 +30,7 @@
 </div>
 <div class="container">
 <div class="row">
-<div class="col-sm-4" id="quotes">
+<div class="col-sm-6" id="quotes">
     <hr>
     <h3>User testimonials:</h3>
     <p><i>"I met the love of my life who also helped me develop my cat app!" - Jonah</i></p>
@@ -39,14 +39,19 @@
     <br>
     <p><i>"Dating has never been so easy, and all I had to do was setup a profile" - Marcus</i></p>
     <hr>
+
+    <div class="text-center">
+        <form method="get" action="info">
+            <input type="submit" class="btn btn-danger vertical-center" value="Create Profile">
+        </form>
+    </div>
+
 </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
         <img src="images/laptop-couple.jpg" alt="laptop couple" class="img-fluid">
     </div>
 </div>
-    <div class="align-middle">
-        <button type="button" class="btn btn-danger vertical-center">Create Profile!</button>
-    </div>
+
 </div>
 
 </body>

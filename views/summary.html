@@ -17,10 +17,29 @@
             <a class="navbar-brand" href="#">DevsMeet</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="home.html">Home</a></li>
+            <li class="active"><a href="{{ @BASE }}">Home</a></li>
         </ul>
     </div>
 </nav>
+<div class="jumbotron">
+    <h2>Your Profile</h2>
+</div>
+<div class="container mt-4">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <form action="summary" method="POST">
+            <div class="mb-3 col-4 mx-auto">
+                <p>Name: {{@SESSION.firstname}} {{@SESSION.lastname}}</p>
+                <p>Age: {{@SESSION.age}}</p>
+                <p>Gender: {{@SESSION.gender}}</p>
+                <p>Phone Number: {{@SESSION.phonenumber}}</p>
+                <p>Email Address: {{@SESSION.email}}</p>
+                <p>State: {{@SESSION.state}}</p>
+                <p>Seeking: {{@SESSION.seeking}}</p>
+                <p></p>
 
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
