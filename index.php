@@ -26,16 +26,67 @@ $f3->route('GET /', function () {
 });
 
 //Define info route (info.html)
-$f3 -> route('GET|POST /info', function(){
+$f3 -> route('GET|POST /info', function($f3){
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
+    if($_SERVER['REQUEST_METHOD']=='POST') {
         $firstname = trim($_POST['firstname']);
         $lastname = trim($_POST['last-name']);
         $phonenumber = trim($_POST['phonenumber']);
         $age = trim($_POST['age']);
+        $email = trim($_POST['email']);
 
+        if (validName($firstname)) {
+            $_SESSION['firstname'] = $firstname;
+        } else {
+            $f3->Set("error['firstname']", "First name must not be empty");
+        }
+
+        if (validName($lastname)) {
+            $_SESSION['lastname'] = $lastname;
+        } else {
+            $f3->Set("error['lastname']", "last name must not be empty");
+        }
+
+        if (validPhone($phonenumber)) {
+            $_SESSION['phonenumber'] = $phonenumber;
+        } else {
+            $f3->Set("error['phonenumber']", "Phone number must not be empty");
+        }
+
+        if (validAge($age)) {
+            $_SESSION['age'] = $age;
+        } else {
+            $f3->Set("error['age']", "Age must not be empty");
+        }
+
+        if (validEmail($email)) {
+            $_SESSION['email'] = $email;
+        } else {
+            $f3->Set("error['email']", "Email must not be empty");
+        }
+
+        if (isset($_POST["gender"])) {
+            $gen = $_POST["gender"];
+
+            if (validGender($gen)) {
+                $_SESSION["gender"] = $gen;
+            } else {
+                $f3->Set("error['gender']", "Gender must be selected");
+            }
+
+            if (empty($f3->get("error"))) {
+                $f3->reroute("/profile.html");
+            }
+        }
     }
 
+    $f3->set("gender", getGender());
+    $f3->set("firstname",isset($firstname) ? $firstname : "");
+    $f3->set("lastname",isset($lastname) ? $lastname : "");
+    $f3->set("phonenumber",isset($phonenumber) ? $phonenumber : "");
+    $f3->set("age",isset($age) ? $age : "");
+
+    $f3->set("gender",isset($gender) ? $gender : "");
 
 
     $view = new Template();
@@ -43,35 +94,16 @@ $f3 -> route('GET|POST /info', function(){
 });
 
 //Define profile route (profile.html)
-$f3->route('POST /profile', function (){
+$f3->route('POST /profile', function ($f3){
 
-    $firstname = $_POST['firstname'];
-    if(!empty($firstname)){
-        $_SESSION['firstname'] = $firstname;
+
+    if($_SERVER["REQUEST_METHOD"] == 'POST'){
+        $email = trim($_POST['email']);
     }
 
-    $lastname = $_POST['lastname'];
-    if(!empty($firstname)){
-        $_SESSION['lastname'] = $lastname;
-    }
-
-    $age = $_POST['age'];
-    if(!empty($age)){
-        $_SESSION['age'] = $age;
-    }
-
-    if(isset($_POST['gender'])){
-        $gender = $_POST['gender'];
-        $_SESSION['gender'] = $gender;
-    }
-
-    $phonenumber = $_POST['phonenumber'];
-    if(!empty($phonenumber)){
-        $_SESSION['phonenumber'] = $phonenumber;
-    }
-
-   $view = new Template();
-   echo $view->render('views/profile.html');
+    $f3->set("email",isset($email) ? $email : "");
+    $view = new Template();
+    echo $view->render('views/profile.html');
 });
 
 //Define interests route (interests.html)
@@ -103,66 +135,6 @@ $f3->route('POST /interests', function (){
 
 //Define default summary route (sumamry.html)
 $f3->route('POST /summary', function (){
-
-    if(isset($_POST['interest1'])){
-        $interest1 = $_POST['interest1'];
-        $_SESSION['interest1'] = $interest1;
-    }
-
-    if(isset($_POST['interest2'])){
-        $interest2 = $_POST['interest2'];
-        $_SESSION['interest2'] = $interest2;
-    }
-
-    if(isset($_POST['interest3'])){
-        $interest3 = $_POST['interest3'];
-        $_SESSION['interest3'] = $interest3;
-    }
-
-    if(isset($_POST['interest4'])){
-        $interest4 = $_POST['interest4'];
-        $_SESSION['interest4'] = $interest4;
-    }
-
-    if(isset($_POST['interest5'])){
-        $interest5 = $_POST['interest5'];
-        $_SESSION['interest5'] = $interest5;
-    }
-
-    if(isset($_POST['interest6'])){
-        $interest6 = $_POST['interest6'];
-        $_SESSION['interest6'] = $interest6;
-    }
-
-    if(isset($_POST['interest7'])){
-        $interest7 = $_POST['interest7'];
-        $_SESSION['interest7'] = $interest7;
-    }
-
-    if(isset($_POST['interest8'])){
-        $interest8 = $_POST['interest8'];
-        $_SESSION['interest8'] = $interest8;
-    }
-
-    if(isset($_POST['interest9'])){
-        $interest9 = $_POST['interest9'];
-        $_SESSION['interest9'] = $interest9;
-    }
-
-    if(isset($_POST['interest10'])){
-        $interest10 = $_POST['interest10'];
-        $_SESSION['interest10'] = $interest10;
-    }
-
-    if(isset($_POST['interest11'])){
-        $interest11 = $_POST['interest11'];
-        $_SESSION['interest11'] = $interest11;
-    }
-
-    if(isset($_POST['interest12'])){
-        $interest12 = $_POST['interest12'];
-        $_SESSION['interest12'] = $interest12;
-    }
 
 
 
