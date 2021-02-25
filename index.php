@@ -10,6 +10,8 @@ session_start();
 
 //Require the autoload file
 require_once('vendor/autoload.php');
+require_once('model/validation.php');
+require_once ('model/data-layer.php');
 
 //Create an instance of the Base class
 $f3 = Base::instance();
@@ -24,7 +26,17 @@ $f3->route('GET /', function () {
 });
 
 //Define info route (info.html)
-$f3 -> route('GET /info', function(){
+$f3 -> route('GET|POST /info', function(){
+
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $firstname = trim($_POST['firstname']);
+        $lastname = trim($_POST['last-name']);
+        $phonenumber = trim($_POST['phonenumber']);
+        $age = trim($_POST['age']);
+
+    }
+
+
 
     $view = new Template();
     echo $view->render('views/info.html');
@@ -80,12 +92,80 @@ $f3->route('POST /interests', function (){
         $_SESSION['seeking'] = $seeking;
     }
 
+    $bio = $_POST['bio'];
+    if(!empty($bio)){
+        $_SESSION['bio'] = $bio;
+    }
+
     $view = new Template();
     echo $view->render('views/interests.html');
 });
 
 //Define default summary route (sumamry.html)
 $f3->route('POST /summary', function (){
+
+    if(isset($_POST['interest1'])){
+        $interest1 = $_POST['interest1'];
+        $_SESSION['interest1'] = $interest1;
+    }
+
+    if(isset($_POST['interest2'])){
+        $interest2 = $_POST['interest2'];
+        $_SESSION['interest2'] = $interest2;
+    }
+
+    if(isset($_POST['interest3'])){
+        $interest3 = $_POST['interest3'];
+        $_SESSION['interest3'] = $interest3;
+    }
+
+    if(isset($_POST['interest4'])){
+        $interest4 = $_POST['interest4'];
+        $_SESSION['interest4'] = $interest4;
+    }
+
+    if(isset($_POST['interest5'])){
+        $interest5 = $_POST['interest5'];
+        $_SESSION['interest5'] = $interest5;
+    }
+
+    if(isset($_POST['interest6'])){
+        $interest6 = $_POST['interest6'];
+        $_SESSION['interest6'] = $interest6;
+    }
+
+    if(isset($_POST['interest7'])){
+        $interest7 = $_POST['interest7'];
+        $_SESSION['interest7'] = $interest7;
+    }
+
+    if(isset($_POST['interest8'])){
+        $interest8 = $_POST['interest8'];
+        $_SESSION['interest8'] = $interest8;
+    }
+
+    if(isset($_POST['interest9'])){
+        $interest9 = $_POST['interest9'];
+        $_SESSION['interest9'] = $interest9;
+    }
+
+    if(isset($_POST['interest10'])){
+        $interest10 = $_POST['interest10'];
+        $_SESSION['interest10'] = $interest10;
+    }
+
+    if(isset($_POST['interest11'])){
+        $interest11 = $_POST['interest11'];
+        $_SESSION['interest11'] = $interest11;
+    }
+
+    if(isset($_POST['interest12'])){
+        $interest12 = $_POST['interest12'];
+        $_SESSION['interest12'] = $interest12;
+    }
+
+
+
     $view = new Template();
     echo $view->render('views/summary.html');
 });
