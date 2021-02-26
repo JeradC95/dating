@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Information</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
@@ -27,30 +25,51 @@
     <p>First we're going to need a little bit of info.</p>
 </div>
 <hr>
+
 <div class="container mt-4">
-    <div class="row col-sm-4" id="info-form">
-        <form action="profile" method="POST">
-            <label for="firstname">First Name</label><br>
-            <input type="text" id="firstname" name="firstname">
-            <br><br>
-            <label for="lastname">Last Name</label><br>
-            <input type="text" id="lastname" name="last-name">
-            <br><br>
-            <label for="age">Age</label><br>
-            <input type="number" id="age" name="age">
-            <br><br>
-            <label>Gender</label><br>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br>
-            <label for="phonenumber">Phone Number</label>
-            <input type="number" id="phonenumber" name="phonenumber">
-            <br><br>
-            <input type="submit" class="btn btn-danger vertical-center" value="Next">
-        </form>
+    <div class="border rounded m-4 p-4">
+        <div class="row">
+        <div class="col-sm-8" id="info-form">
+            <form action="profile" method="POST">
+
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" id="firstname" name="firstname">
+                    <br><br>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" id="lastname" name="last-name">
+                    <br><br>
+                    <label for="age">Age</label><br>
+                    <input type="number" id="age" name="age">
+
+                <fieldset>
+                    <div class="form-group mt-2">
+                        <label>Gender</label><br>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label><br>
+                    </div>
+                </fieldset>
+                <label for="phonenumber">Phone Number</label><br>
+                <input type="number" id="phonenumber" name="phonenumber">
+                <br><br>
+                <input type="submit" class="btn btn-danger vertical-center" value="Next">
+            </form>
+        </div>
+            <div class="col-sm-4">
+                <div id="note1" class="bg-light border rounded">
+                    <p id="note" class="text-center p-2"><span class="font-weight-bold">
+            Note:</span> All information entered is protected by our privacy policy.
+                        Profile information can only be viewed by others with your permission.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

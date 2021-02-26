@@ -14,11 +14,10 @@ button {
     text-indent: 50px;
 }
 
-.container {
-    height: 200px;
-    position: relative;
+
+#note1{
+    border-width: 2px !important;
+    border-color: black;
 }
 
-.vertical-center {
-    position: center;
-}
+
