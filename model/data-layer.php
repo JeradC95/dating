@@ -1,7 +1,7 @@
 <?php
 
 function getIndoorInterests(){
-    return array("tv", "gaming", "movies", "coodking", "reading", "art");
+    return array("tv", "gaming", "movies", "cooking", "reading", "art");
 }
 
 function getOutdoorInterests(){
