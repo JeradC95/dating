@@ -1,17 +1,25 @@
 <?php
 
-function getIndoorInterests(){
-    return array("tv", "gaming", "movies", "cooking", "reading", "art");
-}
+class DatingDataLayer
+{
 
-function getOutdoorInterests(){
-    return array("cycling", "hiking", "camping", "animals", "swimming", "running");
-}
+    function getIndoorInterests()
+    {
+        return array("tv", "gaming", "movies", "cooking", "reading", "art");
+    }
 
-function getGender(){
-    return array("male", "female");
-}
+    function getOutdoorInterests()
+    {
+        return array("cycling", "hiking", "camping", "animals", "swimming", "running");
+    }
 
-function getState(){
-    return array("Washington", "Oregon", "California");
+    function getGender()
+    {
+        return array("male", "female");
+    }
+
+    function getState()
+    {
+        return array("Washington", "Oregon", "California");
+    }
 }

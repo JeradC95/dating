@@ -24,7 +24,6 @@
 </div><hr>
 <div class="container mt-4">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <form action="summary" method="POST">
             <div class="mb-3 col-4 mx-auto">
                 <p>Name: {{@SESSION.firstname}} {{@SESSION.lastname}}</p>
                 <p>Age: {{@SESSION.age}}</p>
@@ -33,15 +32,11 @@
                 <p>Email Address: {{@SESSION.email}}</p>
                 <p>State: {{@SESSION.state}}</p>
                 <p>Seeking: {{@SESSION.seeking}}</p>
-                <p>Interests: {{@SESSION.interest1}} {{@SESSION.interest2}} {{@SESSION.interest3}}
-                    {{@SESSION.interest4}} {{@SESSION.interest5}} {{@SESSION.interest6}}
-                    {{@SESSION.interest7}} {{@SESSION.interest8}} {{@SESSION.interest9}}
-                    {{@SESSION.interest10}} {{@SESSION.interest11}} {{@SESSION.interest12}}</p>
+                <p>Interests: {{@SESSION.indoor}} {{@SESSION.outdoor}}</p>
                 <p>Biography: </p>
                 <p>{{@SESSION.bio}}</p>
 
             </div>
-        </form>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

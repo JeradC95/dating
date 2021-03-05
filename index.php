@@ -4,16 +4,17 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Start Session
-session_start();
-
 //Require the autoload file
 require_once('vendor/autoload.php');
 
+// Start Session
+session_start();
+
 //Create an instance of the Base class
 $f3 = Base::instance();
-
-$controller = new Controller($f3);
+$validator = new DatingValidate();
+$datalayer = new DatingDataLayer();
+$controller = new DatingController($f3);
 
 $f3->set('DEBUG', 3);
 
