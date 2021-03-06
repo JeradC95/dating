@@ -25,20 +25,27 @@ class DatingController{
             $phonenumber = trim($_POST['phonenumber']);
             $age = trim($_POST['age']);
 
+            //create new member
+            $member = new Member();
+
+            //put new member in session array
+            $_SESSION['member'] = $member;
+
+            //using set method to set data on member obj
             if($validator->validName($firstname)){
-                $_SESSION['firstname'] = $firstname;
+                $_SESSION['member']->setFirstname($firstname);
             } else {
                 $this->_f3->set('errors["firstname"]', "Name required");
             }
 
 
-            $_SESSION['lastname'] = $lastname;
-            $_SESSION['phonenumber'] = $phonenumber;
-            $_SESSION['age'] = $age;
+            $_SESSION['member']->setLastname($lastname);
+            $_SESSION['member']->setPhonenumber($phonenumber);
+            $_SESSION['member']->setAge($age);
 
             if (isset($_POST["gender"])) {
                 $gen = $_POST["gender"];
-                $_SESSION["gender"] = $gen;
+                $_SESSION["member"]->setGender($gen);
 
             }
             if(empty($this->_f3->get("errors"))){
@@ -70,24 +77,25 @@ class DatingController{
         $email = $_POST['email'];
 
         if(!empty($email)){
-            $_SESSION['email'] = $email;
+            $_SESSION['member']->setEmail($email);
         } else {
             $this->_f3->set("errors['email']", "Email must be set");
         }
 
         $state = $_POST['state'];
         if(!empty($state)){
-            $_SESSION['state'] = $state;
+            $_SESSION['member']->setState($state);
         }
 
         if(isset($_POST['seeking'])){
             $seeking = $_POST['seeking'];
-            $_SESSION['seeking'] = $seeking;
+            $_SESSION['member']->setSeeking($seeking);
         }
 
         $bio = $_POST['bio'];
         if(!empty($bio)){
-            $_SESSION['bio'] = $bio;
+            $_SESSION['member']->setBio($bio);
+            // $_SESSION['member']->setBio($bio)
         }
         if(empty($this->_f3->get("errors"))){
             $this->_f3->reroute('/interests');

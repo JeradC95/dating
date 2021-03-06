@@ -25,16 +25,16 @@
 <div class="container mt-4">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="mb-3 col-4 mx-auto">
-                <p>Name: {{@SESSION.firstname}} {{@SESSION.lastname}}</p>
-                <p>Age: {{@SESSION.age}}</p>
-                <p>Gender: {{@SESSION.gender}}</p>
-                <p>Phone Number: {{@SESSION.phonenumber}}</p>
-                <p>Email Address: {{@SESSION.email}}</p>
-                <p>State: {{@SESSION.state}}</p>
-                <p>Seeking: {{@SESSION.seeking}}</p>
+                <p>Name: {{@SESSION.member->getFirstname()}} {{@SESSION.member->getLastname()}}</p>
+                <p>Age: {{@SESSION.member->getAge()}}</p>
+                <p>Gender: {{@SESSION.member->getGender()}}</p>
+                <p>Phone Number: {{@SESSION.member->getPhonenumber()}}</p>
+                <p>Email Address: {{@SESSION.member->getEmail()}}</p>
+                <p>State: {{@SESSION.member->getState()}}</p>
+                <p>Seeking: {{@SESSION.member->getSeeking()}}</p>
                 <p>Interests: {{@SESSION.indoor}} {{@SESSION.outdoor}}</p>
                 <p>Biography: </p>
-                <p>{{@SESSION.bio}}</p>
+                <p>{{@SESSION.member->getBio()}}</p>
 
             </div>
     </div>

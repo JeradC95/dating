@@ -54,7 +54,10 @@ function validOutdoor($outdoor)
 
 function validIndoor($indoor)
 {
-    $value = $this->_dataLayer->getOutdoorInterests();
+    $value = $this->_dataLayer->getIndoorInterests();
+    var_dump($indoor);
+    echo('<br>');
+    var_dump($value);
     foreach ($indoor as $var) {
         if (!in_array($var, $value)) {
             return false;

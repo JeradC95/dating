@@ -19,13 +19,9 @@
          * @param $_gender
          * @param $_phonenumber
          */
-        public function __construct($_firstname, $_lastname, $_age, $_gender, $_phonenumber)
+        public function __construct()
         {
-            $this->_firstname = $_firstname;
-            $this->_lastname = $_lastname;
-            $this->_age = $_age;
-            $this->_gender = $_gender;
-            $this->_phonenumber = $_phonenumber;
+            //default constructor
         }
 
 
