@@ -159,19 +159,19 @@ class DatingController{
         $result = $database->getMembers();
 
         foreach($result as $row){
-            $members['full'] = $row['fname'] . " ". $row['lname'];
-            $members['age'] = $row['age'];
-            $members['gender'] = $row['gender'];
-            $members['phone'] = $row['phone'];
-            $members['email'] = $row['email'];
-            $members['state'] = $row['state'];
-            $members['seeking'] = $row['seeking'];
-            $members['interests'] = $row['interests'];
-            $members['bio'] = $row['bio'];
-            $members['image'] = $row['image'];
-            $members['premium'] = $row['premium'];
+            $cols['full'] = $row['fname'] . " ". $row['lname'];
+            $cols['age'] = $row['age'];
+            $cols['gender'] = $row['gender'];
+            $cols['phone'] = $row['phone'];
+            $cols['email'] = $row['email'];
+            $cols['state'] = $row['state'];
+            $cols['seeking'] = $row['seeking'];
+            $cols['interests'] = $row['interests'];
+            $cols['bio'] = $row['bio'];
+            $cols['image'] = $row['image'];
+            $cols['premium'] = $row['premium'];
 
-            $members = $cols;
+            $members[] = $cols;
         }
         $this->_f3->set('members', $members);
 
