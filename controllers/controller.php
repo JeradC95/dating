@@ -121,12 +121,18 @@ class DatingController{
                 } else {
                     $this->_f3->set("errors['indoor]", "Valid interests only");
                 }
+            } else {
+                $indoor = " ";
             }
 
             if (isset($_POST["outdoor"])) {
-                $_SESSION['outdoor'] = implode(" ", $_POST['outdoor']);
+                $interests = implode(" ", $_POST['outdoor']);
+            } else {
+                $interests = " ";
             }
             if(empty($this->_f3->get("errors"))){
+                $allInterests = $interests . " " . $indoor;
+                $_SESSION['member']->setInterests($allInterests);
                 $this->_f3->reroute("/summary");
             }
         }
@@ -136,10 +142,41 @@ class DatingController{
 
     function summary(){
 
+       global $database;
+       $database->insertMember();
+
        $view = new Template();
        echo $view->render('views/summary.html');
 
        session_destroy();
+    }
+
+    function admin(){
+        global $database;
+
+        $members = array();
+        $cols = array();
+        $result = $database->getMembers();
+
+        foreach($result as $row){
+            $members['full'] = $row['fname'] . " ". $row['lname'];
+            $members['age'] = $row['age'];
+            $members['gender'] = $row['gender'];
+            $members['phone'] = $row['phone'];
+            $members['email'] = $row['email'];
+            $members['state'] = $row['state'];
+            $members['seeking'] = $row['seeking'];
+            $members['interests'] = $row['interests'];
+            $members['bio'] = $row['bio'];
+            $members['image'] = $row['image'];
+            $members['premium'] = $row['premium'];
+
+            $members = $cols;
+        }
+        $this->_f3->set('members', $members);
+
+        $view = new Template();
+        echo $view->render('views/admin.html');
     }
 
 

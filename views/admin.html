@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">DevsMeet</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="{{ @BASE }}">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="admin">Admin</a> </li>
+    </ul>
+</div>
+</nav>
+
+<div class="vh-100">
+    <h1>Admin</h1>
+    <table id = "service-table" class = "display mb-4">
+        <thead>
+        <tr>
+
+            <td>Name </td>
+            <td>Age </td>
+            <td>Gender </td>
+            <td>Phone Number </td>
+            <td>Email </td>
+            <td>State </td>
+            <td>Seeking </td>
+            <td>Interests </td>
+            <td>Biography </td>
+            <td>Image </td>
+            <td>Premium </td>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <repeat group = "{{ @member }}" value = "{{ @member }}">
+            <tr>
+                <td>{{ @member['name'] }}</td>
+                <td>{{ @member['age'] }}</td>
+                <td>{{ @member['gender'] }}</td>
+                <td>{{ @member['phone'] }}</td>
+                <td>{{ @member['email'] }}</td>
+                <td>{{ @member['state'] }}</td>
+                <td>{{ @member['seeking'] }}</td>
+                <td>{{ @member['interests'] }}</td>
+                <td>{{ @member['bio'] }}</td>
+                <td>{{ @member['image'] }}</td>
+                <td>{{ @member['premium'] }}</td>
+            </tr>
+        </repeat>
+
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script>
+    $('#service-table').DataTable(
+
+    );
+</script>
+
+</body>
+</html>

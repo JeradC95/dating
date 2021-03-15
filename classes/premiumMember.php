@@ -1,5 +1,9 @@
 <?php
 
-class PremiumMember extends Member}{
+class PremiumMember extends Member{
+
+    function getInterests(){
+
+    }
 
 }

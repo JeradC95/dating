@@ -10,6 +10,7 @@
         private $_state;
         private $_seeking;
         private $_bio;
+        private $_interests;
 
         /**
          * Member constructor.
@@ -167,6 +168,14 @@
         public function setBio($bio)
         {
             $this->_bio = $bio;
+        }
+
+        public function getInterests(){
+            return $this->_interests;
+        }
+
+        public function setInterests($interests){
+            $this->_interests = $interests;
         }
 
 

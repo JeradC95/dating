@@ -15,6 +15,9 @@ $f3 = Base::instance();
 $validator = new DatingValidate();
 $datalayer = new DatingDataLayer();
 $controller = new DatingController($f3);
+$database = new Database();
+
+require $_SERVER['DOCUMENT_ROOT'].'/../config.php';
 
 $f3->set('DEBUG', 3);
 
@@ -52,6 +55,11 @@ $f3->route('GET|POST /summary', function (){
 
     global $controller;
     $controller->summary();
+});
+
+$f3->route('GET /admin', function (){
+    global $controller;
+    $controller->admin();
 });
 
 
